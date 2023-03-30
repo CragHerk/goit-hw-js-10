@@ -1,15 +1,12 @@
-import './css/styles.css';
-
-const DEBOUNCE_DELAY = 300;
-
 import { fetchCountries } from './fetchCountries.js';
+import debounce from 'lodash.debounce';
+const DEBOUNCE_DELAY = 300;
 
 const searchBox = document.getElementById('search-box');
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
-searchBox.addEventListener('input', async () => {
-  const searchTerm = searchBox.value;
+const search = async searchTerm => {
   if (!searchTerm) {
     countryList.innerHTML = '';
     return;
@@ -23,4 +20,12 @@ searchBox.addEventListener('input', async () => {
   } catch (error) {
     console.error(error);
   }
-});
+};
+
+searchBox.addEventListener(
+  'input',
+  debounce(() => {
+    const searchTerm = searchBox.value.trim();
+    search(searchTerm);
+  }, DEBOUNCE_DELAY)
+);
