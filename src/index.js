@@ -1,6 +1,6 @@
 import './css/styles.css';
 import { fetchCountries } from './fetchCountries.js';
-var debounce = require('lodash.debounce');
+import { debounce } from 'lodash';
 import Notiflix from 'notiflix';
 const DEBOUNCE_DELAY = 300;
 
