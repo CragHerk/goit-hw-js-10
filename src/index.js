@@ -58,7 +58,7 @@ const generateStyleString = styleKey => {
       cursor: 'pointer',
     },
     img: {
-      width: '35px',
+      width: '40px',
     },
     p: {
       margin: 0,
