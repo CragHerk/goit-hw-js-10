@@ -1,7 +1,7 @@
 import './css/styles.css';
 import { fetchCountries } from './fetchCountries.js';
 var debounce = require('lodash.debounce');
-import Notiflix from 'notiflix';
+const Notiflix = require('notiflix');
 const DEBOUNCE_DELAY = 300;
 
 const searchInput = document.getElementById('search-box');
