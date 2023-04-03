@@ -30,7 +30,7 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "alias": {
-    "lodash.debounce": "./node_modules/lodash.debounce/index.js",
+    "lodash.debounce": "./node_modules/lodash.debounce/",
     "notiflix": "./node_modules/notiflix/"
   }
 }
