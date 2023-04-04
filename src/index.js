@@ -1,6 +1,6 @@
 import './css/styles.css';
-import Notiflix from 'notiflix';
-import debounce from 'lodash.debounce';
+//import Notiflix from 'notiflix';
+//import debounce from 'lodash.debounce';
 
 import { fetchCountries } from './fetchCountries.js';
 const DEBOUNCE_DELAY = 300;
@@ -20,7 +20,7 @@ countryList.addEventListener('click', event => {
   }
 });
 // pobieranie i render krajow
-const handleSearch = debounce(() => {
+const handleSearch = _.debounce(() => {
   const searchTerm = searchInput.value.trim();
   if (searchTerm) {
     fetchCountries(searchTerm).then(data => {
