@@ -20,7 +20,7 @@ countryList.addEventListener('click', event => {
   }
 });
 // pobieranie i render krajow
-const handleSearch = _.debounce(() => {
+const handleSearch = debounce(() => {
   const searchTerm = searchInput.value.trim();
   if (searchTerm) {
     fetchCountries(searchTerm).then(data => {
